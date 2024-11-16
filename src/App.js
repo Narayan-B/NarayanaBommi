@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithubSquare, FaDownload, FaReact, FaCode, FaGraduationCap,FaCss3Alt, FaSchool,FaNodeJs,FaBookOpen,FaHtml5 } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaDownload,FaWhatsapp, FaReact, FaCode, FaGraduationCap, FaCss3Alt, FaSchool, FaNodeJs, FaBookOpen, FaHtml5 } from "react-icons/fa";
 import { CiMobile3 } from "react-icons/ci";
-import { SiGmail,SiRedux,SiExpress } from "react-icons/si";
+import { SiGmail, SiRedux, SiExpress } from "react-icons/si";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { FiSend } from "react-icons/fi";
-import { IoMdMail,IoMdCode } from "react-icons/io";
+import { IoMdMail, IoMdCode } from "react-icons/io";
 import { RiJavascriptFill } from "react-icons/ri";
-import { BiLogoTypescript,BiLogoMongodb } from "react-icons/bi";
+import { BiLogoTypescript, BiLogoMongodb } from "react-icons/bi";
 
 const TypeWriter = ({ texts, speed = 150 }) => {
   const [displayText, setDisplayText] = useState('');
@@ -117,34 +117,34 @@ const Portfolio = () => {
 
     return () => observer.disconnect();
   }, []);
- 
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // Validate if any field is empty
     if (!formData.name || !formData.email || !formData.message) {
       setErrors({ general: 'All fields are required' });  // Set a generic error message
       return;  // Prevent form submission if validation fails
     }
-  
+
     // If validation passes, clear any existing errors
     setErrors({});
-  
+
     // Prepare the WhatsApp message
     const phoneNumber = '+918639423365'; // Replace with your WhatsApp phone number (with country code)
     const message = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
-  
+
     // Generate the WhatsApp URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-  
+
     // Redirect to WhatsApp
     window.open(whatsappUrl, '_blank');
-  
+
     // Reset the form
     setFormData({ name: '', email: '', message: '' });
   };
-  
+
 
   const projects = [
     {
@@ -188,14 +188,14 @@ const Portfolio = () => {
     { name: "CSS3", level: 85, icon: <FaCss3Alt size={20} color="#1572B6" /> },
     { name: "Redux", level: 80, icon: <SiRedux size={20} color="#764ABC" /> },
   ];
-  
+
   const backendSkills = [
     { name: "Node.js", level: 75, icon: <FaNodeJs size={20} color="#68A063" /> },
     { name: "REST APIs", level: 80, icon: <IoMdCode size={20} color="#000000" /> },
     { name: "MongoDB", level: 70, icon: <BiLogoMongodb size={20} color="#47A248" /> },
     { name: "Express", level: 85, icon: <SiExpress size={20} color="#F1502F" /> },
   ];
-  
+
   const educationData = [
     {
       title: "MERN STACK COURSE",
@@ -203,21 +203,21 @@ const Portfolio = () => {
       duration: "6 Months",
       date: "Dec 2023 - July 2023",
       details: "",
-      icon: <FaCode size={30}/>,
+      icon: <FaCode size={30} />,
     },
     {
       title: "Bachelor Of Technology",
       institution: "JNTU Anantapur",
       grade: "8.55 CGPA",
       date: "2019 - 2023",
-      icon: <FaGraduationCap size={30}/>,
+      icon: <FaGraduationCap size={30} />,
     },
     {
       title: "Narayana Junior College - MPC",
       institution: "Andra Pradesh - State Board",
       grade: "10 CGPA",
       date: "2017 - 2019",
-      icon: <FaSchool size={30}/>,
+      icon: <FaSchool size={30} />,
     },
     {
       title: "SSC",
@@ -249,29 +249,30 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50">
       {/* Animated Navigation */}
-      <nav className="bg-white/80 backdrop-blur-sm fixed w-full z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Narayana B
-            </h1>
-            <div className="flex space-x-6">
-            <a href="#hero" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
-              <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
-              <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <nav className="bg-white/80 backdrop-blur-sm fixed w-full z-50 shadow-lg hidden md:block">
+  <div className="max-w-6xl mx-auto px-4 py-4">
+    <div className="flex justify-between items-center">
+      <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+        Narayana B
+      </h1>
+      <div className="flex space-x-6">
+        <a href="#hero" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+        <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
+        <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+        <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+        <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
 
       {/* Animated Hero Section */}
-      <section id="hero" className={`pt-32 pb-10 transition-all duration-1000 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section id="hero" className={` pt-20 md:pt-32 pb-10 transition-all duration-1000 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r h-16 from-blue-600 to-indigo-600 bg-clip-text text-transparent inline-flex items-center gap-4">
+            <h1 className="text-2xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r s h-16 from-blue-600 to-indigo-600 bg-clip-text text-transparent inline-flex items-center gap-4">
                 Hi, I'm Bommi Narayana
               </span>
             </h1>
@@ -296,7 +297,7 @@ const Portfolio = () => {
               </a>
               <a href="mailto:narayanabommi863@gamil.com"
                 className="text-gray-600 hover:text-blue-600 transform hover:scale-110 transition-all duration-300">
-                <SiGmail size={28} color='#0077B5'/>
+                <SiGmail size={28} color='#0077B5' />
               </a>
             </div>
           </div>
@@ -312,17 +313,20 @@ const Portfolio = () => {
             <h5>Introduction</h5>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-2 items-center">
-            {/* Image Column */}
-            <div className="space-y-6">
-              <div className="relative">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            {/* Video Column */}
+            <div className="space-y-6 flex justify-center items-center">
+              <div className="relative w-full max-w-[80%]">
                 <video
                   src="/profilevideo.mp4"
                   alt="Profile Video"
-                  className=" rounded-lg  w-full max-w-[80%] object-cover"
+                  className="rounded-lg w-full object-cover"
                   autoPlay
                   loop
                   muted
+                  // Remove hover border or outline if it's being applied to the video
+                  onMouseOver={(e) => e.currentTarget.style.outline = 'none'}
+                  onFocus={(e) => e.currentTarget.style.outline = 'none'}
                 />
               </div>
             </div>
@@ -330,20 +334,21 @@ const Portfolio = () => {
             {/* Content Column */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 px-2 md:px-4 leading-relaxed">
                   As a dedicated MERN Stack Developer with a passion for crafting end-to-end web solutions, I leverage my expertise in MongoDB, Express.js, React.js, and Node.js to architect and deliver scalable applications that seamlessly integrate user experience with powerful backend functionality, while adhering to clean code principles and modern development practices, all while remaining committed to continuous learning and staying ahead of industry trends.
                 </p>
               </div>
 
               {/* Resume Download Button */}
-              <button
-                onClick={() => window.open('/Narayan-Resume.pdf', '_blank')}
-                className="inline-flex items-center gap-2 text-center bg-blue-600 text-white px-6 py-3 rounded-lg
-                         hover:bg-blue-700 transition-colors duration-300 shadow-lg"
-              >
-                <FaDownload />
-                Download Resume
-              </button>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => window.open('/Narayan-Resume.pdf', '_blank')}
+                  className="inline-flex items-center gap-2 text-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+                >
+                  <FaDownload />
+                  Download Resume
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -373,6 +378,7 @@ const Portfolio = () => {
           </svg>
         </div>
       </section>
+
 
       {/* Projects Section */}
       <section id="projects" className={`pt-32 py-12 transition-all duration-1000 ${isVisible.projects ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -515,113 +521,113 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-       {/* contact form */}
-       <section
-      id="contact"
-      className={`pt-32 py-16 transition-all duration-1000 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-    >
-      <div className="max-w-6xl mx-auto px-20">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Me</h2>
-          <p className="text-gray-600">Get in touch</p>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-        </div>
-
-        <div className="grid md:grid-cols-2 justify-center items-center gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
-                  {info.icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                    {info.title}
-                  </h3>
-                  <p className="text-gray-600">{info.content}</p>
-                </div>
-              </div>
-            ))}
+      {/* contact form */}
+      <section
+        id="contact"
+        className={`pt-32 py-16 transition-all duration-1000 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      >
+        <div className="max-w-6xl mx-auto px-20">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Me</h2>
+            <p className="text-gray-600">Get in touch</p>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
-  <form onSubmit={handleSubmit} className="space-y-6">
-    {/* Show general error message if any */}
-    {errors.general && (
-      <p className="text-red-500 text-sm">{errors.general}</p>
-    )}
+          <div className="grid md:grid-cols-2 justify-center items-center gap-12">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                      {info.title}
+                    </h3>
+                    <p className="text-gray-600">{info.content}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-    <div>
-      <label
-        htmlFor="name"
-        className="block text-sm font-medium text-gray-700 mb-1"
-      >
-        Name
-      </label>
-      <input
-        type="text"
-        id="name"
-        value={formData.name}
-        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        placeholder="Your name"
-      />
-    </div>
+            {/* Contact Form */}
+            <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Show general error message if any */}
+                {errors.general && (
+                  <p className="text-red-500 text-sm">{errors.general}</p>
+                )}
 
-    <div>
-      <label
-        htmlFor="email"
-        className="block text-sm font-medium text-gray-700 mb-1"
-      >
-        Email
-      </label>
-      <input
-        type="email"
-        id="email"
-        value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        placeholder="your@email.com"
-      />
-    </div>
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your name"
+                  />
+                </div>
 
-    <div>
-      <label
-        htmlFor="message"
-        className="block text-sm font-medium text-gray-700 mb-1"
-      >
-        Message
-      </label>
-      <textarea
-        id="message"
-        rows="7"
-        value={formData.message}
-        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        placeholder="Your message"
-      ></textarea>
-    </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your@email.com"
+                  />
+                </div>
 
-    <button
-      type="submit"
-      className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-blue-700 transition-colors duration-300"
-    >
-      <span>Send Message</span>
-      <FiSend className="w-5 h-5" />
-    </button>
-  </form>
-</div>
-</div>
-</div>
-    </section>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows="7"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-blue-700 transition-colors duration-300"
+                >
+                  <span>Send Message</span>
+                  <FiSend className="w-5 h-5" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
       {/* Contact Section */}
-      <section  className={`py-16 transition-all duration-1000 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <section className={`py-16 transition-all duration-1000 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Let's Connect
@@ -639,11 +645,92 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-6xl mx-auto px-4 text-center text-white">
-          <p>© {new Date().getFullYear()} Narayana B. All rights reserved.</p>
+      {/* Footer Section */}
+      <footer className="bg-blue-600 text-white pt-8 pb-6 md:hidden">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Logo and Title Section */}
+      <div className="text-center md:text-left">
+        <h1 className="text-2xl font-bold">Narayana B</h1>
+        <span className="text-gray-200">MERN Stack Developer</span>
+      </div>
+
+      {/* Links Section */}
+      <div className="text-center">
+        <ul className="space-y-2">
+          <li>
+            <a href="#hero" className="hover:text-gray-200 transition-colors duration-300">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#projects" className="hover:text-gray-200 transition-colors duration-300">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="hover:text-gray-200 transition-colors duration-300">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#skills" className="hover:text-gray-200 transition-colors duration-300">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-gray-200 transition-colors duration-300">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Social Links Section */}
+      <div className="text-center md:text-right">
+        <div className="flex justify-center md:justify-end space-x-4">
+          <a 
+            href="https://github.com/Narayan-B" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-200 transition-colors duration-300"
+          >
+            <FaGithubSquare size={24} />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/bommi-narayana-83857b213" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-200 transition-colors duration-300"
+          >
+            <FaLinkedin size={24} />
+          </a>
+          <a 
+            href="https://wa.me/8639423365" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-200 transition-colors duration-300"
+          >
+            <FaWhatsapp size={24} />
+          </a>
+          <a 
+            href="mailto:narayanabommi863@gmail.com"
+            className="hover:text-gray-200 transition-colors duration-300"
+          >
+            <SiGmail size={24} />
+          </a>
         </div>
-      </footer>
+      </div>
+    </div>
+
+    {/* Copyright Section */}
+    <div className="text-center mt-8 pt-8 border-t border-blue-500">
+      <p className="text-sm text-gray-200">
+        © {new Date().getFullYear()} Narayana B. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
