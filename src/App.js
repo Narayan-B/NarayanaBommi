@@ -201,7 +201,7 @@ const Portfolio = () => {
       title: "MERN STACK COURSE",
       institution: "DCT Academy, Bangalore",
       duration: "6 Months",
-      date: "Dec 2023 - July 2023",
+      date: "Dec 2023 - July 2024",
       details: "",
       icon: <FaCode size={30} />,
     },
