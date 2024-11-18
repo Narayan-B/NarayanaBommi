@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithubSquare, FaDownload,FaWhatsapp, FaReact, FaCode, FaGraduationCap, FaCss3Alt, FaSchool, FaNodeJs, FaBookOpen, FaHtml5 } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaDownload, FaWhatsapp, FaReact, FaCode, FaGraduationCap, FaCss3Alt, FaSchool, FaNodeJs, FaBookOpen, FaHtml5 } from "react-icons/fa";
 import { CiMobile3 } from "react-icons/ci";
 import { SiGmail, SiRedux, SiExpress } from "react-icons/si";
 import { MdMarkEmailUnread } from "react-icons/md";
@@ -174,7 +174,7 @@ const Portfolio = () => {
     {
       title: "Job Portal",
       description: "A full-stack job portal enabling seamless employer-candidate connections. Features include smart job matching, real-time tracking, and interactive dashboards for both recruiters and applicants. Built with MERN stack, it streamlines the hiring process through automated skill matching and instant notifications.",
-      technologies: ["React", "MongoDB", "Node.js", "Redux"],
+      technologies: ["React", "D3.js", "Node.js", "MySQL"],
       githubFrontend: "https://github.com/Narayan-B/jop-portal-frontend",
       githubBackend: 'https://github.com/Narayan-B/job-portal-backend'
       //live: "https://social-dashboard-demo.com"
@@ -201,7 +201,7 @@ const Portfolio = () => {
       title: "MERN STACK COURSE",
       institution: "DCT Academy, Bangalore",
       duration: "6 Months",
-      date: "Dec 2023 - July 2024",
+      date: "Dec 2023 - July 2023",
       details: "",
       icon: <FaCode size={30} />,
     },
@@ -250,21 +250,21 @@ const Portfolio = () => {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50">
       {/* Animated Navigation */}
       <nav className="bg-white/80 backdrop-blur-sm fixed w-full z-50 shadow-lg hidden md:block">
-  <div className="max-w-6xl mx-auto px-4 py-4">
-    <div className="flex justify-between items-center">
-      <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-        Narayana B
-      </h1>
-      <div className="flex space-x-6">
-        <a href="#hero" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
-        <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
-        <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
-        <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
-        <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
-      </div>
-    </div>
-  </div>
-</nav>
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Narayana B
+            </h1>
+            <div className="flex space-x-6">
+              <a href="#hero" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
+              <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+              <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
 
       {/* Animated Hero Section */}
@@ -646,91 +646,83 @@ const Portfolio = () => {
 
       {/* Footer */}
       {/* Footer Section */}
-      <footer className="bg-blue-600 text-white pt-8 pb-6 md:hidden">
-  <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* Logo and Title Section */}
-      <div className="text-center md:text-left">
-        <h1 className="text-2xl font-bold">Narayana B</h1>
-        <span className="text-gray-200">MERN Stack Developer</span>
-      </div>
+      <footer className="bg-blue-600 text-white pt-8 pb-6">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Logo and Title Section */}
+            <div className="text-center md:text-left">
+              <h1 className="text-2xl font-bold">Narayana B</h1>
+              <span className="text-gray-200">MERN Stack Developer</span>
+            </div>
 
-      {/* Links Section */}
-      <div className="text-center">
-        <ul className="space-y-2">
-          <li>
-            <a href="#hero" className="hover:text-gray-200 transition-colors duration-300">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-gray-200 transition-colors duration-300">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-gray-200 transition-colors duration-300">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="hover:text-gray-200 transition-colors duration-300">
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-gray-200 transition-colors duration-300">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+            {/* Links Section */}
+            <div className="text-center md:text-left">
+              <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
+                <a href="#hero" className="block hover:text-gray-200 transition-colors duration-300">
+                  Home
+                </a>
+                <a href="#projects" className="block hover:text-gray-200 transition-colors duration-300">
+                  Projects
+                </a>
+                <a href="#about" className="block hover:text-gray-200 transition-colors duration-300">
+                  About
+                </a>
+                <a href="#skills" className="block hover:text-gray-200 transition-colors duration-300">
+                  Skills
+                </a>
+                <a href="#contact" className="block hover:text-gray-200 transition-colors duration-300">
+                  Contact
+                </a>
+              </div>
+            </div>
 
-      {/* Social Links Section */}
-      <div className="text-center md:text-right">
-        <div className="flex justify-center md:justify-end space-x-4">
-          <a 
-            href="https://github.com/Narayan-B" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-200 transition-colors duration-300"
-          >
-            <FaGithubSquare size={24} />
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/bommi-narayana-83857b213" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-200 transition-colors duration-300"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a 
-            href="https://wa.me/8639423365" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-200 transition-colors duration-300"
-          >
-            <FaWhatsapp size={24} />
-          </a>
-          <a 
-            href="mailto:narayanabommi863@gmail.com"
-            className="hover:text-gray-200 transition-colors duration-300"
-          >
-            <SiGmail size={24} />
-          </a>
+
+            {/* Social Links Section */}
+            <div className="text-center md:text-right">
+              <div className="flex justify-center md:justify-end space-x-4">
+                <a
+                  href="https://github.com/Narayan-B"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-200 transition-colors duration-300"
+                >
+                  <FaGithubSquare size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/bommi-narayana-83857b213"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-200 transition-colors duration-300"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+                <a
+                  href="https://wa.me/8639423365"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-200 transition-colors duration-300"
+                >
+                  <FaWhatsapp size={24} />
+                </a>
+                <a
+                  href="mailto:narayanabommi863@gmail.com"
+                  className="hover:text-gray-200 transition-colors duration-300"
+                >
+                  <SiGmail size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright Section */}
+          <div className="text-center mt-8 pt-8 border-t border-blue-500">
+            <p className="text-sm text-gray-200">
+              © {new Date().getFullYear()} Narayana B. All rights reserved.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
+      </footer>
 
-    {/* Copyright Section */}
-    <div className="text-center mt-8 pt-8 border-t border-blue-500">
-      <p className="text-sm text-gray-200">
-        © {new Date().getFullYear()} Narayana B. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
     </div>
   );
 };
