@@ -174,7 +174,7 @@ const Portfolio = () => {
     {
       title: "Job Portal",
       description: "A full-stack job portal enabling seamless employer-candidate connections. Features include smart job matching, real-time tracking, and interactive dashboards for both recruiters and applicants. Built with MERN stack, it streamlines the hiring process through automated skill matching and instant notifications.",
-      technologies: ["React", "D3.js", "Node.js", "MySQL"],
+      technologies: ["React", "MongoDB", "Node.js", "Redux"],
       githubFrontend: "https://github.com/Narayan-B/jop-portal-frontend",
       githubBackend: 'https://github.com/Narayan-B/job-portal-backend'
       //live: "https://social-dashboard-demo.com"
@@ -201,7 +201,7 @@ const Portfolio = () => {
       title: "MERN STACK COURSE",
       institution: "DCT Academy, Bangalore",
       duration: "6 Months",
-      date: "Dec 2023 - July 2023",
+      date: "Dec 2023 - July 2024",
       details: "",
       icon: <FaCode size={30} />,
     },
