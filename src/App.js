@@ -226,10 +226,31 @@ const Portfolio = () => {
       company: "TableSprint Technologies Private Limited, Bangalore",
       duration: "Present",
       date: "Feb 2025 - Present",
-      details: "Building an AI Platform to develop scalable enterprise applications using the MERN stack.",
-      icon: <FaBriefcase size={30} />,
+      details: "Building an AI Platform to develop scalable enterprise applications using modern web technologies.",
+      icon: (
+        <img
+          src="/Tablesprint-Logo.png"
+          alt="Tablesprint Logo"
+          className="w-8 h-8 object-contain"
+        />
+      ),
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Vilambi Technologies Private Limited, Hyderabad (Service-based)",
+      duration: "1 year 6 months",
+      date: "June 2023 - Jan 2025",
+      details: "Worked on multiple client projects, delivering scalable web applications using modern technologies.",
+      icon: (
+        <img
+          src="/Vilambi-Logo.png"
+          alt="Vilambi Logo"
+          className="w-8 h-8 object-contain rounded-full"
+        />
+      ),
     },
   ];
+
 
   const educationData = [
     {
@@ -486,9 +507,10 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <div className="w-12 h-12 absolute left-2 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center">
-                    <div className="bg-blue-600 text-white p-3 rounded-full shadow-lg">
+                    <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
                       {item.icon}
                     </div>
+
                   </div>
                 </div>
               ))}
