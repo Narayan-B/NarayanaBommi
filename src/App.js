@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithubSquare, FaDownload, FaWhatsapp, FaReact, FaCode, FaGraduationCap, FaCss3Alt, FaSchool, FaNodeJs, FaBookOpen, FaHtml5, FaBriefcase } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaDownload, FaWhatsapp, FaReact, FaCode, FaGraduationCap, FaCss3Alt, FaSchool, FaNodeJs, FaBookOpen, FaHtml5 } from "react-icons/fa";
 import { CiMobile3 } from "react-icons/ci";
 import { SiGmail, SiRedux, SiExpress } from "react-icons/si";
 import { MdMarkEmailUnread } from "react-icons/md";
