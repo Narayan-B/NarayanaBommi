@@ -391,7 +391,7 @@ const Portfolio = () => {
 
               <div className="flex justify-center">
                 <button
-                  onClick={() => window.open('/Narayan-Resume.pdf', '_blank')}
+                  onClick={() => window.open('/Narayan-Resumes.pdf', '_blank')}
                   className="inline-flex items-center gap-2 text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <FaDownload />
