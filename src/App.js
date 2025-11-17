@@ -225,7 +225,7 @@ const Portfolio = () => {
       title: "Full Stack Developer",
       company: "TableSprint Technologies Private Limited, Bangalore",
       duration: "Present",
-      date: "Feb 2025 - Present",
+      date: "July 2024 - Present",
       details: "Building an AI Platform to develop scalable enterprise applications using modern web technologies.",
       icon: (
         <img
@@ -238,8 +238,8 @@ const Portfolio = () => {
     {
       title: "Full Stack Developer",
       company: "Vilambi Technologies Private Limited, Hyderabad (Service-based)",
-      duration: "1 year 6 months",
-      date: "June 2023 - Jan 2025",
+      duration: "1 year 0 months",
+      date: "June 2023 - June 2024",
       details: "Worked on multiple client projects, delivering scalable web applications using modern technologies.",
       icon: (
         <img
